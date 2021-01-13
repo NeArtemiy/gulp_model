@@ -1,0 +1,23 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+        url("../fonts/#{$file_name}.woff") format("woff");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+//! Здесь нужно сменить первый параметр на название шрифта
+//! Также здесь нужно поменять 3 значение в зависимости от толщины шрифта
+//* 100: thin;
+//* 200: extra-light (Ultra Light);
+//* 300: light;
+//* 400: regular;
+//* 500: medium;
+//* 600: semi-bold (Demi Bold);
+//* 700: bold;
+//* 800: extra-bold (Ultra Bold);
+//* 900: black (Heavy).
+//! также здесь нужно поменять 4 параметр на italic, если это требуется
